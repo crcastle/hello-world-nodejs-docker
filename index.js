@@ -81,7 +81,7 @@ app.get('/commits', async (req, res) => {
 
   let fetchResponse;
   try {
-    fetchResponse = await fetch(`http://10.142.0.8/commitsProxy?org=${org}`, { timeout: 2000 });
+    fetchResponse = await fetch(`http://10.142.0.8/commitsProxy?org=${org}`);
   } catch {
     return res.status(400).json({'status': 'ok', 'message': 'Service unreachable'});
   }
